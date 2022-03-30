@@ -9,6 +9,12 @@ on:
     paths:
       - 'tools/**'
       - setup.py
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'tools/**'
+      - setup.py
 
 jobs:
   # build:  
