@@ -36,7 +36,7 @@ python: activate_python.sh espnet.done pytorch.done fairscale.done torch_optimiz
 extra: warp-ctc.done warp-transducer.done nkf.done moses.done mwerSegmenter.done pesq kenlm.done pyopenjtalk.done py3mmseg.done beamformit.done fairseq.done s3prl.done k2.done transformers.done phonemizer.done longformer.done
 endif
 
-
+# test ci
 kaldi:
 	test -f kaldi/egs/wsj/s5/utils/parse_options.sh || git clone --depth 1 https://github.com/kaldi-asr/kaldi
 
