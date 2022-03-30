@@ -37,7 +37,6 @@ requirements = {
         "ci_sdr",
         "pytorch_wpe",
     ],
-    # train: The modules invoked when training only.
     "train": [
         "matplotlib==3.1.0",
         "pillow>=6.1.0",
