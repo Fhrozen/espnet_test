@@ -22,6 +22,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
@@ -37,11 +39,11 @@ jobs:
       - name: Build and push CPU container
         run: |
           ls
-        # cd $(pwd)/docker
-        # docker build --build-arg FROM_TAG=runtime-latest \
-        #   -f prebuilt/devel.dockerfile \
-        #   --target devel \
-        #   -t espnet/espnet:cpu-latest .
+          cd $(pwd)/docker
+          docker build --build-arg FROM_TAG=runtime-latest \
+            -f prebuilt/devel.dockerfile \
+            --target devel \
+            -t espnet/espnet:cpu-latest .
       # docker push espnet/espnet:cpu-latest   
 
       # - name: Build and push GPU container
