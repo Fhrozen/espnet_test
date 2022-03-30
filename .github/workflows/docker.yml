@@ -6,15 +6,15 @@ on:
   push:
     branches:
       - main
-    # paths:
-    #   - 'tools/**'
-    #   - setup.py
+    paths:
+      - 'tools/**'
+      - setup.py
   pull_request:
     branches:
       - main
-    # paths:
-    #   - 'tools/**'
-    #   - setup.py
+    paths:
+      - 'tools/**'
+      - setup.py
 
 jobs:
   # build:  
@@ -52,5 +52,5 @@ jobs:
             --build-arg CUDA_VER=11.1 \
             -f prebuilt/devel.dockerfile \
             --target devel \
-            -t espnet/espnet:gpu-latest.
+            -t espnet/espnet:gpu-latest .
           docker push espnet/espnet:gpu-latest
