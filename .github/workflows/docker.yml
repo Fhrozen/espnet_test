@@ -5,13 +5,13 @@ on:
   #   types: [closed]
   push:
     branches:
-      - master
+      - main
     paths:
       - 'tools/**'
       - setup.py
   pull_request:
     branches:
-      - master
+      - main
     paths:
       - 'tools/**'
       - setup.py
