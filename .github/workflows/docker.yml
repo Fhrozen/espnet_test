@@ -36,7 +36,7 @@ jobs:
       
       - name: Build and push CPU container
         run: |
-          cd docker
+          cd $(pwd)/docker
           docker build --build-arg FROM_TAG=runtime-latest \
             -f prebuilt/devel.dockerfile \
             --target devel \
@@ -45,7 +45,8 @@ jobs:
 
       - name: Build and push GPU container
         run: |
-          cd docker
+          ls
+          cd $(pwd)/docker
           docker build --build-arg FROM_TAG=cuda-latest \
             --build-arg CUDA_VER=11.1 \
             -f prebuilt/devel.dockerfile \
