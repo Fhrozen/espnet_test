@@ -46,7 +46,7 @@ requirements = {
         "tensorboard>=1.14",
     ],
     # recipe: The modules actually are not invoked in the main module of espnet,
-    #         but are invoked for the python scripts in each 
+    #         but are invoked for the python scripts in each recipe
     "recipe": [
         "espnet_model_zoo",
         "gdown",
